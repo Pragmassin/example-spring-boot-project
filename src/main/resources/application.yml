@@ -1,0 +1,15 @@
+spring:
+  application:
+  name: simpleAuth
+  datasource:
+    url: jdbc:mysql://localhost:13306/simple_auth
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    locations: classpath:db/migration/common,classpath:db/migration/dev
+    enabled: true
+    baselineOnMigrate: true

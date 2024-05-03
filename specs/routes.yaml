@@ -1,0 +1,21 @@
+openapi: "3.0.3"
+info:
+  description: "example-project"
+  version: "1.1.0"
+  title: "example-project"
+servers:
+  - url: "https://localhost:8080"
+    variables:
+      basePath:
+        default: /api/v1
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+paths:
+  /healthcheck:
+    $ref: "./paths/healthcheck/index.yaml"

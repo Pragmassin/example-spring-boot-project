@@ -1,0 +1,10 @@
+get:
+  summary: "healthcheck"
+  operationId: healthcheck
+  responses:
+    "200":
+      description: "OK"
+      content:
+        application/json:
+          schema:
+            $ref: "../../schemas/responses/healthcheck_response.yaml"
